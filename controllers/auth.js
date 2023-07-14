@@ -97,7 +97,7 @@ const loginUsuario = async(req, res = response) => {
 
 const revalidarToken = async(req, res = response) => {
 
-    const { uid, name } = req.uid;
+    const { uid, name } = req;
 
     const token = await generarJWT( uid, name );
 
@@ -105,7 +105,7 @@ const revalidarToken = async(req, res = response) => {
         ok: true,
         uid,
         name,
-        token
+        token //AAA
     });
 };
 
